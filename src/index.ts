@@ -1,6 +1,6 @@
 import { Args } from "./config/args"
-import { Config } from "./config/config.service"
-import { DB } from "./service/db.service"
+import { config } from "./config/config.service"
+import { DB } from "./services/db.service"
 
 console.log("Hello again !");
 
@@ -8,13 +8,13 @@ Args.required("env", ["local", "test", "beta", "prod"])
 const ENV = Args.get("env")
 //console.log(`Environment is ${ENV}`)
 
-Config.init(ENV)
-console.log(Config.all())
+config.init(ENV)
+console.log(config.all())
 DB.init({ 
-    host: Config.get("DB_HOST"),
-    user: Config.get("DB_USER"),
-    password: Config.get("DB_PASSWORD"),
-    dbname: Config.get("DB_NAME"),
+    host: config.get("DB_HOST"),
+    user: config.get("DB_USER"),
+    password: config.get("DB_PASSWORD"),
+    dbname: config.get("DB_NAME"),
 })
 
 DB.query("SELECT * FROM users")
