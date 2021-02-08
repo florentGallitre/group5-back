@@ -28,7 +28,7 @@ DB.query("SELECT * FROM users")
 
 
 
-    // server.js
+// server.js
 var express = require('express');
 var app = express();
 var port = 3000;
