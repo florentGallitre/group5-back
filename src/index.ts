@@ -1,8 +1,8 @@
+console.log("Hello again !");
+
 import { Args } from "./config/args"
 import { Config } from "./config/config.service"
 import { DB } from "./service/db.service"
-
-console.log("Hello again !");
 
 Args.required("env", ["local", "test", "beta", "prod"])
 const ENV = Args.get("env")

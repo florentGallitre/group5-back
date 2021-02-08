@@ -1,7 +1,6 @@
 {
-    "local": {
-        "DB_HOST": "127.0.0.1",
-        "DB_USER": "simplon",
-        "DB_PASSWORD": "1234",
-        "DB_NAME": "film"
+    "DB_HOST": "localhost",
+    "DB_USER": "simplon",
+    "DB_PASSWORD": "1234",
+    "DB_NAME": ""
 }
