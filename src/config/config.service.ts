@@ -1,12 +1,17 @@
 const fullConfig = require("./config.json");
+const localConfig = require("./config.local.json")
 
-class configService {
+class ConfigService {
 
     private config : any
 
     init (env: string)
     {
        this.config =  fullConfig [env];
+
+       if (env === "local") {
+           this.config = { ...this.config, ...localConfig}
+       }
     }
 
     all()
@@ -20,4 +25,4 @@ class configService {
     }
 }
 
-export const config = new configService ();
+export const config = new ConfigService ();
