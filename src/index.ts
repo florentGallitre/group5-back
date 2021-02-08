@@ -11,10 +11,10 @@ const ENV = Args.get("env")
 Config.init(ENV)
 console.log(Config.all())
 DB.init({ 
-    host: Config.get("127.0.0.1"),
-    user: Config.get("simplon"),
-    password: Config.get("1234"),
-    dbname: Config.get("film"),
+    host: Config.get("DB_HOST"),
+    user: Config.get("DB_USER"),
+    password: Config.get("DB_PASSWORD"),
+    dbname: Config.get("DB_NAME"),
 })
 
 DB.query("SELECT * FROM users")
