@@ -1,5 +1,11 @@
-name: group5-back
-on: [ push ]
+name: groupX-0
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
 jobs:
   test:
     name: Run tests
