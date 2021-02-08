@@ -20,7 +20,7 @@
   },
   "scripts": {
     "watch": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts -- --env=dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r ts-node/register test/**/*.spec.ts --exit"
   },
   "repository": {
     "type": "git",
