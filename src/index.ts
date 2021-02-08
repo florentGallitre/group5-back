@@ -1,6 +1,34 @@
+import { Args } from "./config/args"
+import { Config } from "./config/config.service"
+import { DB } from "./service/db.service"
+
 console.log("Hello again !");
 
-// server.js
+Args.required("env", ["local", "test", "beta", "prod"])
+const ENV = Args.get("env")
+//console.log(`Environment is ${ENV}`)
+
+Config.init(ENV)
+console.log(Config.all())
+DB.init({ 
+    host: Config.get("127.0.0.1"),
+    user: Config.get("simplon"),
+    password: Config.get("1234"),
+    dbname: Config.get("film"),
+})
+
+DB.query("SELECT * FROM users")
+    .then(results => {
+        console.log(results)
+    }).catch(e => {
+        console.log(e)
+    })
+
+
+
+
+
+    // server.js
 var express = require('express');
 var app = express();
 var port = 3000;
