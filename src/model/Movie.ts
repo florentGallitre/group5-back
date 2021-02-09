@@ -1,10 +1,11 @@
 export class Movie {
 
     id: number = null
-    name: string = null
+    title: string = null
     time:number = null
     filmmaker: string = null
     releaseDate: string = null
+    summary: string = null
 
     constructor(data?: any){
         if(data){

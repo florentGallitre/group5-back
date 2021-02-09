@@ -19,6 +19,7 @@ CREATE TABLE Movie
     id int AUTO_INCREMENT PRIMARY KEY NOT NULL, 
     title varchar(100) NOT NULL, 
     summary varchar(255) NOT NULL,
+    time int,
     releaseDate varchar(15),
     filmMaker_Id int NOT NULL,
 	CONSTRAINT FK_FilmMaker_Id
