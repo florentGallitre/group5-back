@@ -4,6 +4,7 @@ import { UserRepositoryService } from "./repository/user.repository";
 dotenv.config()
 // import my services afterwards
 import { config, DB } from "./services"
+import { MovieRepositoryService } from "./repository/movie.repository"
 
 
 /******Express******/
@@ -19,19 +20,17 @@ app.listen(port, function () {
 });
 
 // route our app
-app.get('/', function (req, res) {
+app.get('/', (req: any, res: any) => {
     res.send('hello world!');
 });
 
-app.get('/users', (req: any, res: any) => {
+app.get('/movies', (req: any, res:any) => {
     const limit = req.query.limit
 
-    UserRepositoryService.getUsers(limit)
-        .then((users: any) => {
-            res.send(users)
-        }).catch(e => {
-            // logs?
-            res.send(500, { error: e.toString() })
-        })
+    MovieRepositoryService.getMovies(limit)
+    .then((movies: any) => {
+        res.send(movies)
+    }).catch(e => {
+        res.send(500, { error: e.toString() })
+    })
 })
-
