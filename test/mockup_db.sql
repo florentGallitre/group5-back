@@ -37,12 +37,12 @@ CREATE TABLE Movie_Genre
     CONSTRAINT FK_Movie_Id__Movie
 		FOREIGN KEY (Movie_Id)
 		REFERENCES Movie (Id)
-			ON DELETE CASCADE
+			ON DELETE CASCADE,
 	CONSTRAINT FK_Genre_Id__Genre
 		FOREIGN KEY (Genre_Id)
 		REFERENCES Genre (Id)
             ON DELETE CASCADE
-);<
+);
 
 INSERT INTO `FilmMaker` (`id`, `firstname`, `lastname`)
 VALUES
