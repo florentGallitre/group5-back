@@ -1,6 +1,3 @@
-CREATE DATABASE Movies;
-Use Movies;
-
 DROP TABLE IF EXISTS `FilmMaker`;
 CREATE TABLE FilmMaker
 (
