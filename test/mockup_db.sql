@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS `FilmMaker`;
+DROP TABLE IF EXISTS FilmMaker;
 CREATE TABLE FilmMaker
 (
     id int AUTO_INCREMENT PRIMARY KEY NOT NULL, 
@@ -6,14 +6,14 @@ CREATE TABLE FilmMaker
     lastname varchar(75) NOT NULL
 );
 
-DROP TABLE IF EXISTS `Genre`;
+DROP TABLE IF EXISTS Genre;
 CREATE TABLE Genre
 (
     id int AUTO_INCREMENT PRIMARY KEY NOT NULL, 
     genre varchar(50) NOT NULL
 );
 
-DROP TABLE IF EXISTS `Movie`;
+DROP TABLE IF EXISTS Movie;
 CREATE TABLE Movie 
 (
     id int AUTO_INCREMENT PRIMARY KEY NOT NULL, 
@@ -28,7 +28,7 @@ CREATE TABLE Movie
 			ON DELETE CASCADE
 );
 
-DROP TABLE IF EXISTS `Movie_Genre`;
+DROP TABLE IF EXISTS Movie_Genre;
 CREATE TABLE Movie_Genre
 (
     id int AUTO_INCREMENT PRIMARY KEY NOT NULL, 
@@ -44,14 +44,14 @@ CREATE TABLE Movie_Genre
             ON DELETE CASCADE
 );
 
-INSERT INTO `FilmMaker` (`id`, `firstname`, `lastname`)
+INSERT INTO FilmMaker ('id', 'firstname', 'lastname')
 VALUES
 	(1,'Rian','Johnsson'),
 	(2,'Studio','Ghibli'),
 	(3,'Joss','Whedon');
 
-INSERT INTO `Movie` (`id`, `title`, `summary`, `time`, `releaseDate`, `filmMaker_Id`)
+INSERT INTO Movie ('id', 'title', 'summary', 'time', 'releaseDate', 'filmMaker_Id')
 VALUES
 	(1,'Knives out','summary 1',130, '2019', 1),
 	(2,'Avenger','summary 2', 140, '2012', 3),
-	(3,'Edward','le voyage de Chihiro','summary 3', 78, '2002',2);
+	(3,'le voyage de Chihiro','summary 3', 78, '2002',2);
