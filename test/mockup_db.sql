@@ -52,6 +52,6 @@ VALUES
 
 INSERT INTO `Movie` (`id`, `title`, `summary`, `time`, `releaseDate`, `filmMaker_Id`)
 VALUES
-	(1,'Knives out',`summary 1`,130, `2019`, 1),
+	(1,'Knives out','summary 1',130, `2019`, 1),
 	(2,'Avenger','summary 2', 140, '2012', 3),
 	(3,'Edward','le voyage de Chihiro',`summary 3`, 78, `2002`,2);
