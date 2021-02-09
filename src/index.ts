@@ -1,4 +1,5 @@
 import * as dotenv from "dotenv"
+import { UserRepositoryService } from "./repository/user.repository";
 // read .env file before everything else
 dotenv.config()
 // import my services afterwards
@@ -21,8 +22,7 @@ app.listen(port, function () {
 // route our app
 app.get('/', (req: any, res: any) => {
     res.send('hello world!');
-})
-
+});
 
 app.get('/movies', (req: any, res:any) => {
     const limit = req.query.limit
