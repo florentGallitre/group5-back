@@ -20,20 +20,20 @@ const data = {
 
 const film: any = new Movie(data)
 
-describe("Test if film model is valid", () => {
-    it("should valid Film model", () => {
-        expect(film.id).to.equal(1),
-            expect(film.title).to.equal("knives out"),
-            expect(film.filmmaker).to.equal(15),
-            expect(film.time).to.equal(130),
-            expect(film.releaseDate).to.equal("2019-03-11")
-        expect(film.summary).to.equal("this is the movie summary")
-    })
-})
+// describe("Test if film model is valid", () => {
+//     it("should valid Film model", () => {
+//         expect(film.id).to.equal(1),
+//             expect(film.title).to.equal("knives out"),
+//             expect(film.filmmaker).to.equal(15),
+//             expect(film.time).to.equal(130),
+//             expect(film.releaseDate).to.equal("2019-03-11")
+//         expect(film.summary).to.equal("this is the movie summary")
+//     })
+// })
 
 describe("Test movie repository", () => {
 
-    it("Test if getMovie returns correct results", () => {
+    it("Test if getMovies returns correct results", () => {
 
         return MovieRepositoryService.getMovies(3, 0)
             .then((results) => {
