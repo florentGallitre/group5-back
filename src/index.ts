@@ -1,14 +1,10 @@
-import { Args } from "./config/args"
-import { config } from "./config/config.service"
+import { config } from "./services/config.service"
 import { DB } from "./services/db.service"
 
 console.log("Hello again !");
 
-Args.required("env", ["local", "test", "beta", "prod"])
-const ENV = Args.get("env")
 //console.log(`Environment is ${ENV}`)
 
-config.init(ENV)
 console.log(config.all())
 DB.init({ 
     host: config.get("DB_HOST"),
