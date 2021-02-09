@@ -1,13 +1,14 @@
 import * as assert from "assert"
 import * as chai from "chai"
-import { Movie } from "../src/model/Movie"
 import * as dotenv from "dotenv"
 import * as path from "path"
-import { MovieRepositoryService } from "../src/repository/movie.repository"
 
 const envPath = path.resolve(__dirname + "/../.env.test")
 dotenv.config({ path: envPath })
 const expect = chai.expect
+
+import { Movie } from "../src/model/Movie"
+import { MovieRepositoryService } from "../src/repository/movie.repository"
 
 const data = {
     id: 1,
