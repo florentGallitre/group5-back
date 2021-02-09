@@ -48,7 +48,8 @@ INSERT INTO FilmMaker (id, firstname, lastname)
 VALUES
 	(1,'Rian','Johnsson'),
 	(2,'Studio','Ghibli'),
-	(3,'Joss','Whedon');
+	(3,'Joss','Whedon'),
+    (4,'gilberte', 'will');
 
 INSERT INTO Movie (id, title, summary, time, releaseDate, filmMaker_Id)
 VALUES
