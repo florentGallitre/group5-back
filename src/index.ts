@@ -1,30 +1,13 @@
-import { config } from "./services/config.service"
-import { DB } from "./services/db.service"
-
-console.log("Hello again !");
-
-//console.log(`Environment is ${ENV}`)
-
-console.log(config.all())
-DB.init({ 
-    host: config.get("DB_HOST"),
-    user: config.get("DB_USER"),
-    password: config.get("DB_PASSWORD"),
-    dbname: config.get("DB_NAME"),
-})
-
-DB.query("SELECT * FROM users")
-    .then(results => {
-        console.log(results)
-    }).catch(e => {
-        console.log(e)
-    })
+import * as dotenv from "dotenv"
+// read .env file before everything else
+dotenv.config()
+// import my services afterwards
+import { config, DB } from "./services"
 
 
+/******Express******/
 
-
-
-    // server.js
+// server.js
 var express = require('express');
 var app = express();
 var port = 3000;
