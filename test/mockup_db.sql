@@ -44,13 +44,13 @@ CREATE TABLE Movie_Genre
             ON DELETE CASCADE
 );
 
-INSERT INTO FilmMaker ('id', 'firstname', 'lastname')
+INSERT INTO FilmMaker (id, firstname, lastname)
 VALUES
 	(1,'Rian','Johnsson'),
 	(2,'Studio','Ghibli'),
 	(3,'Joss','Whedon');
 
-INSERT INTO Movie ('id', 'title', 'summary', 'time', 'releaseDate', 'filmMaker_Id')
+INSERT INTO Movie (id, title, summary, time, releaseDate, filmMaker_Id)
 VALUES
 	(1,'Knives out','summary 1',130, '2019', 1),
 	(2,'Avenger','summary 2', 140, '2012', 3),
