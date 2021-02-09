@@ -5,7 +5,7 @@ CREATE TABLE FilmMaker
 (
     id int AUTO_INCREMENT PRIMARY KEY NOT NULL, 
     firstname varchar(75) NOT NULL, 
-    lastname varchar(75) NOT NULL
+    lastname varchar(75) NOT NULL@@@@@@@
 );
 
 CREATE TABLE Genre
