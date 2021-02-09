@@ -27,4 +27,4 @@ class ConfigService
     }
 }
 
-export const config = new ConfigService ();
+export const config = new ConfigService ()

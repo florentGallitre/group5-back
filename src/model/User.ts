@@ -5,9 +5,6 @@ export class User {
     surname: string = null
 
     constructor(data?: any){
-        //this.id = data.id
-        //this.name = data.name
-        //this.email = data.email
         if(data){
             this.hydrate(data)
         } 

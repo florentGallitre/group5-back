@@ -5,7 +5,7 @@ class MovieRepository
 {
     getMovies(limit: number = 10, offset: number = 0): Promise<Array<Movie>>
     {
-        const queryString = `SELECT id, title, filmmaker_Id, time, releaseDate, summary FROM Movies LIMIT ${limit} OFFSET ${offset}`
+        const queryString = 'SELECT id, title, filmmaker_Id, time, releaseDate, summary FROM Movies LIMIT ${limit} OFFSET ${offset}'
         
         return new Promise((resolve, reject) => {
 
