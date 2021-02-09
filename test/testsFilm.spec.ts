@@ -33,7 +33,7 @@ describe("Test if film model is valid", () => {
 
 describe("Test movie repository", () => {
 
-    it("Test if getMovie returns correct results", () => {
+    it("Test if getMovies returns correct results", () => {
 
         return MovieRepositoryService.getMovies(3, 0)
             .then((results) => {
