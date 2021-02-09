@@ -10,7 +10,7 @@ const data = {
     name: "knives out",
     filmmaker: "Rian Johnson",
     time:130,
-    releaseDate: new DateTime(2019, 3, 11)
+    releaseDate: "2019-03-11"
 }
 
 const film: any = new Movie(data)
@@ -20,7 +20,7 @@ describe("Test if film model is valid", () =>{
         expect(film.id).to.equal(1),
         expect(film.name).to.equal("knives out"),
         expect(film.filmmaker).to.equal("Rian Johnson"),
-        expect(film.time).to.equal("130"),
-        expect(film.releaseDate).to.equal("2019")
+        expect(film.time).to.equal(130),
+        expect(film.releaseDate).to.equal("2019-03-11")
     })
 })
