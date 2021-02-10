@@ -9,8 +9,8 @@ jobs:
     steps:
       - name: Executing remote ssh 2 commands using password
         uses: appleboy/ssh-action@master
-         env:
-           CLONE_DIR: /home/john/group5
+        env:
+          CLONE_DIR: /home/john/group5
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USERNAME }}
