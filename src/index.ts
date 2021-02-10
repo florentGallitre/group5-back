@@ -3,7 +3,7 @@ import { UserRepositoryService } from "./repository/user.repository";
 // read .env file before everything else
 dotenv.config()
 // import my services afterwards
-import { config } from "./services"
+import { config, DB } from "./services"
 import { MovieRepositoryService } from "./repository/movie.repository"
 
 
