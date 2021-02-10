@@ -3,7 +3,7 @@ import { UserRepositoryService } from "./repository/user.repository";
 // read .env file before everything else
 dotenv.config()
 // import my services afterwards
-import { config, DB } from "./services"
+import { config } from "./services"
 import { MovieRepositoryService } from "./repository/movie.repository"
 
 
@@ -24,13 +24,13 @@ app.get('/', (req: any, res: any) => {
     res.send('hello world!');
 });
 
-app.get('/movies', (req: any, res:any) => {
-    const limit = req.query.limit
+// app.get('/movies', (req: any, res:any) => {
+//     const limit = req.query.limit
 
-    MovieRepositoryService.getMovies(limit)
-    .then((movies: any) => {
-        res.send(movies)
-    }).catch(e => {
-        res.send(500, { error: e.toString() })
-    })
-})
+//     MovieRepositoryService.getMovies(limit)
+//     .then((movies: any) => {
+//         res.send(movies)
+//     }).catch(e => {
+//         res.send(500, { error: e.toString() })
+//     })
+//})
