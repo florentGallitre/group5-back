@@ -2,16 +2,22 @@ name: Deploy in beta
 on: 
   push:
     branches:
-      -develop
+      - develop
 jobs:
   deploy:
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Executing remote ssh 2 commands using password
         uses: appleboy/ssh-action@master
+        # env:
+        #   CLONE_DIR: /home/john/group5
         with:
-          host:  ${{ secrets.HOST }}
+          host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           port: 22
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: echo "Hello"
+          script: echo "Hello world"
+                  # mkdir -p $CLONE_DIR
+                  # git clone -b develop git@github.com:florentGallitre/group5-back.git $CLONE_DIR
+                  # cd $CLONE_DIR
+                  # ls -la
