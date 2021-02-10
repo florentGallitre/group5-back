@@ -22,7 +22,11 @@ jobs:
             mkdir -p /home/john/group5
             rm -rf /home/john/group5/*
             git clone -b develop git@github.com:florentGallitre/group5-back.git /home/john/group5
-            cd /home/john/group5
+            cd group5
+            rm -r src test
+            rm package.json package-lock.json tsconfig.json README.md pre-build.sh pre-test.sh
+            cd /home/john/group5/dist
             npm install
             npm run build
+            
                    
