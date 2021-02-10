@@ -31,8 +31,3 @@ jobs:
         # $GITHUB_WORKSPACE
       - run: npm install
       - run: npm test
-    # - name: SendGrid Action 
-    #   uses: peter-evans/sendgrid-action@v1.0.1
-    #     env :
-    #       SENDGRID_API_KEY : ${{secrets.SENDGRID_API_KEY}}
-    #       SCRIPT_FILEPATH: ./github/workflows/sendGrid.ts
