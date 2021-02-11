@@ -10,7 +10,7 @@ jobs:
       - name: Executing remote ssh 2 commands using password
         uses: appleboy/ssh-action@master
         env:
-          CLONE_DIR: /home/john/node-group5
+          CLONE_DIR: /home/john/node-grp5
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USERNAME }}
@@ -20,7 +20,7 @@ jobs:
           script: |
             echo "Hello world"
             rm -rf $CLONE_DIR
-            git clone -b develop git@github.com:florentGallitre/group5-back.git /home/john/node-group5
+            git clone -b develop git@github.com:florentGallitre/group5-back.git /home/john/node-grp5
             cd $CLONE_DIR
             npm install
             npm run build 
