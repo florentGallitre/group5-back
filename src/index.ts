@@ -20,7 +20,7 @@ app.listen(process.env.PORT, function () {
 
 // route our app
 app.get('/', (req: any, res: any) => {
-    res.send('hello world!');
+    res.send('hello world !');
 });
 
 // app.get('/movies', (req: any, res:any) => {
