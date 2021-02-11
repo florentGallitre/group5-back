@@ -12,11 +12,10 @@ import { MovieRepositoryService } from "./repository/movie.repository"
 // server.js
 var express = require('express');
 var app = express();
-var port = 3000;
 
 // start the server
-app.listen(port, function () {
-    console.log('Go to : http://localhost:3000/');
+app.listen(process.env.PORT, function () {
+    console.log(`Example app listening on port ${process.env.PORT}`)
 });
 
 // route our app
