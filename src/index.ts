@@ -23,13 +23,13 @@ app.get('/', (req: any, res: any) => {
     res.send({ message: "Ok: group 5" });
 });
 
-// app.get('/movies', (req: any, res:any) => {
-//     const limit = req.query.limit
+app.get('/movies', (req: any, res:any) => {
+    const limit = req.query.limit
 
-//     MovieRepositoryService.getMovies(limit)
-//     .then((movies: any) => {
-//         res.send(movies)
-//     }).catch(e => {
-//         res.send(500, { error: e.toString() })
-//     })
-//})
+    MovieRepositoryService.getMovies(limit)
+    .then((movies: any) => {
+        res.send(movies)
+    }).catch(e => {
+        res.send(500, { error: e.toString() })
+    })
+})
