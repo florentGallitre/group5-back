@@ -24,10 +24,11 @@ jobs:
             cd $CLONE_DIR
             npm install
             npm run build 
-            rm -r src test
+            rm -r src test node_modules
             rm package.json package-lock.json tsconfig.json README.md pre-build.sh pre-test.sh
             cp .env.beta ./dist/.env
             cd dist
+            npm install
             sed -i 's/xport/${{ secrets.EXPRESS_PORT }}/g' .env
           
             
