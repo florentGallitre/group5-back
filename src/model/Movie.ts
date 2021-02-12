@@ -2,10 +2,12 @@ export class Movie {
 
     id: number = null
     title: string = null
-    time:number = null
+    duration:number = null
     filmmaker: string = null
     releaseDate: string = null
     summary: string = null
+    genre: string = null
+    country: string = null
 
     constructor(data?: any){
         if(data){
@@ -20,6 +22,4 @@ export class Movie {
             }
         }
     }
-
-
 }

@@ -29,7 +29,6 @@ app.get('/status', (req: any, res:any) => {
 
 app.get('/movies', (req: any, res:any) => {
     const limit = req.query.limit
-
     MovieRepositoryService.getMovies(limit)
     .then((movies: any) => {
         res.send(movies)
