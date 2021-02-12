@@ -15,7 +15,6 @@ class MovieRepository
                 }).catch(e => {
                     reject(e)
                 })
-
         })
     }
 }
