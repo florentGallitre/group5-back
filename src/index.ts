@@ -18,10 +18,14 @@ app.listen(process.env.PORT, function () {
     console.log(`Example app listening on port ${process.env.PORT}`)
 });
 
-// route our app
+// routes
 app.get('/', (req: any, res: any) => {
     res.send({ message: "Ok: group 5" });
 });
+
+app.get('/status', (req: any, res:any) => {
+    res.send({ message : "API ok : grp5"})
+})
 
 app.get('/movies', (req: any, res:any) => {
     const limit = req.query.limit
