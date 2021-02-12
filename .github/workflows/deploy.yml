@@ -46,7 +46,7 @@ jobs:
       - name: Test api
         uses: lakuapik/gh-actions-http-status@v1
         with: 
-          sites:'["http://grp5.360medics.com:8080/status"]'
+          sites: '["http://grp5.360medics.com:8080/status"]'
           expected: '[200]'
           
             
