@@ -9,6 +9,7 @@ jobs:
     steps:
       - name: Executing remote ssh 2 commands using password
         uses: appleboy/ssh-action@master
+
         env:
           CLONE_DIR: /home/john/node-grp5
         with:
@@ -32,6 +33,15 @@ jobs:
             sed -i 's/xport/${{ secrets.EXPRESS_PORT }}/g' .env
             pm2 stop app-grp5
             pm2 start index.js --name "app-grp5"
+
+  api_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test api
+        uses: lakuapik/gh-actions-http-status@v1
+        with: 
+          sites:'["http://grp5.360medics.com:8080/status"]'
+          expected: '[200]'
           
             
                    
