@@ -12,25 +12,28 @@ import { MovieRepositoryService } from "./repository/movie.repository"
 // server.js
 var express = require('express');
 var app = express();
-var port = 3000;
 
 // start the server
-app.listen(port, function () {
-    console.log('Go to : http://localhost:3000/');
+app.listen(process.env.PORT, function () {
+    console.log(`Example app listening on port ${process.env.PORT}`)
 });
 
-// route our app
+// routes
 app.get('/', (req: any, res: any) => {
-    res.send('hello world!');
+    res.send({ message: "Ok: group 5" });
 });
 
-// app.get('/movies', (req: any, res:any) => {
-//     const limit = req.query.limit
+app.get('/status', (req: any, res:any) => {
+    res.send({ message : "API ok : grp5"})
+})
 
-//     MovieRepositoryService.getMovies(limit)
-//     .then((movies: any) => {
-//         res.send(movies)
-//     }).catch(e => {
-//         res.send(500, { error: e.toString() })
-//     })
-//})
+app.get('/movies', (req: any, res:any) => {
+    const limit = req.query.limit
+
+    MovieRepositoryService.getMovies(limit)
+    .then((movies: any) => {
+        res.send(movies)
+    }).catch(e => {
+        res.send(500, { error: e.toString() })
+    })
+})
